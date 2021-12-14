@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+	<style>
+	@font-face {
+		font-family: aquire;
+		src: url(fonts/Aquire.otf);
+	}
+	@font-face {
+		font-family: nanami;
+		src: url(fonts/Nanami-Regular.otf);
+		font-weight: 500;
+	}
+
+	@font-face {
+		font-family: nanami;
+		src: url(fonts/Nanami-Light.otf);
+		font-weight: 400;
+	}
+
+	nav{
+		background-color: #222831;
+		/*background-color: #e74c3c;*/
+	}
+
+	.nav-link{
+		font-family: montserrat;
+		font-weight: 500;
+	}
+	body{
+		/*color:#212529;*/
+		color:#51544a;
+		background-color: #E3E3E3;
+		font-family: nanami;
+	}
+
+	footer{
+		background-color: #222831;
+		/*background-color: #141414;*/
+		padding: 20px;
+		color: #fff;
+		text-align: center;
+	}
+
+	@keyframes moveright {
+		0% {left:0px;}
+		50% {left:5px;}
+		100% {left:0px;}
+	}
+	@keyframes backgroundColorPalette {
+		0% {
+			color: #ee6055;
+		}
+		25% {
+			color: #60d394;
+		}
+		50% {
+			color: #aaf683;
+		}
+		75% {
+			color: #ffd97d;
+		}
+		100% {
+			color: #ff9b85;
+		}
+	}
+
+	.flash{
+		font-size: 20px;
+		font-weight: bold;
+		animation-name: backgroundColorPalette;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-timing-function: linear; 
+	}
+	.bounceRight{
+		position: relative;
+		animation-name: moveright;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes moveleft {
+		0% {right:0px;}
+		50% {right:5px;}
+		100% {right:0px;}
+	}
+	.bounceLeft{
+		position: relative;
+		animation-name: moveleft;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+	}
+	.parallax {
+		background-image: url("images/bg.jpg");
+		min-height: 500px;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		color: white;
+		z-index: 0;
+	}
+
+	.layer{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0.5;
+		z-index: -1;
+	}
+	.welcome{
+		position: absolute;
+		left: 20%;
+		top: 30%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	.imagefeature{
+		background-color: #fffc;
+		border-radius: 15px;
+		padding: 60px;
+	}
+</style>
+</head>
+
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-0">
+		<div class="container">
+			<a class="navbar-brand" href="#" style="font-family: aquire; font-size:25px;">Styx</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active" style="position: relative;">
+						<a class="nav-link flash" href="https://discord.com/invite/NuDwUvE"><i class="fas fa-arrow-right bounceRight"></i> Join ATWD! <i class="fas fa-arrow-left bounceLeft"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="text-center mt-4">
+		<div class="waves-container" style="background: linear-gradient(144deg, #CB3737, #EE6F57)!important;">
+			<!-- <img class="d-block w-100" src="images/bg.jpg" alt="First slide"> -->
+			<div class="parallax text-center">
+				<div class="layer"></div>
+				<div class="welcome" style="letter-spacing: 1px;font-family: 'aquire';">
+					<img src="images/logowhite.png" style="width: 250px;margin-bottom: 15px;">
+					<h2>NX-ATWD Wallets</h2>
+
+					<h5>NX - "Non-Existent"</h5></div>
+					<div class="waves" style="bottom: 0px;position: absolute;width: 100%;">
+						<svg width="100%" height="200px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" stop-color="#E3E3E3" />
+								<stop offset="100%" stop-color="#E3E3E3" />
+							</linearGradient>
+							<path fill="url(#gradient)" d="M0 67 C 273,183 822,-40 1920.00,106 V 359 H 0  V 67 Z">
+								<animate repeatCount="indefinite" fill="url(#gradient)" attributeName="d" dur="5s" attributeType="XML" values="M0 77  C 473,283 822,-40 1920,116  V 359 H 0  V 67 Z; M0 77 C 473,-40 1222,283 1920,136  V 359 H 0 V 67 Z; M0 77 C 973,260 1722,-53 1920,120  V 359  H 0  V 67  Z; M0 77 C 473,283 822,-40 1920,116 V 359 H 0 V 67 Z">
+								</animate>
+							</path>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<h1 style="font-size: 60px;margin-bottom: 40px;"><i class="fa fa-arrow-down"></i></h1>
+				<h1 style="letter-spacing: 7px;text-transform: uppercase; font-weight: 600;">Not your average Wallet</h1>
+				<h4 style="letter-spacing: 1px;font-weight: 400;">Crafted with care by the most professional leather-workers and designers in my imagination</h4>
+				<h1 style="font-size: 60px;margin-bottom: 40px;"><i class="fa fa-arrow-down"></i></h1>
+				<h4 style="letter-spacing: 1px;font-weight: 400;">Our Wallets</h4>
+				<div style="position: absolute;display: flex;width:65%;z-index: -1;align-items: flex-end;justify-content: center;"><img src="images/all.png" style="width:69%;"></div>
+
+				<div class="imagefeature mt-3 mb-3">
+					<div class="row">
+						<div class="col-md-6 imagehover" back="images/redback.png" front="images/red.png"><img src="images/red.png"></div>
+						<div class="col-md-6"><h1>The Classic</h1><h5 style="font-weight:400;">Standard ATWD color with one pair of opening and closing tags on the back (designs can be customized). Yeah yeah the image is a little rough around the edges but it won't look like that when we <strike>don't</strike> send it out to you</h5></div>
+					</div>
+				</div>
+
+
+				<div class="imagefeature mt-3 mb-3">
+					<div class="row">
+						<div class="col-md-6"><h1>The Dark Knight</h1><h5 style="font-weight:400;">Too tired to think of stuff to write and since im not being judged Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, praesentium ad asperiores excepturi ratione nesciunt odio sapiente dolorum necessitatibus possimus nam commodi repellat unde deleniti nostrum repudiandae corrupti officiis assumenda.</div>
+						<div class="col-md-6 imagehover" back="images/blackback.png" front="images/black.png"><img src="images/black.png"></div>
+					</div>
+				</div>
+
+
+				<div class="imagefeature mt-3 mb-3">
+					<div class="row">
+						<div class="col-md-6 imagehover" back="images/whiteback.png" front="images/white.png"><img src="images/white.png"></div>
+						<div class="col-md-6"><h1>The Platinum</h1><h5 style="font-weight:400;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquam ad possimus, quasi quia quae nihil. Minus perspiciatis, quasi asperiores sit praesentium voluptates et necessitatibus pariatur deserunt molestias vel eius.</div>
+					</div>
+				</div>
+
+			</div>
+         	<footer>
+				<h4>Thanks for visiting</h4>
+				<p>Thanks to "All things web development" for the challenge</p>
+			</footer>
+		
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+	<script>
+		$(".imagehover").on("mouseenter",function(){
+			$(this).find("img").attr("src",$(this).attr("back"))
+		})
+		$(".imagehover").on("mouseleave",function(){
+			$(this).find("img").attr("src",$(this).attr("front"))
+		})
+	</script>
+</body>
+
+</html>
